@@ -12,7 +12,7 @@ def signup(request):
             )
             auth.login(request, user)
 
-            return redirect('home')
+            return render(request, 'home.html',{'user':user})
           
     return render(request, "signup.html")
 
